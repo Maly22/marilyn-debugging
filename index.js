@@ -93,6 +93,7 @@ function setup() {
   resetButton.style.display = 'none';
 }
 
+
 submitButton.addEventListener('click', checkGuess);
 resetButton.addEventListener('click', setup);
 
