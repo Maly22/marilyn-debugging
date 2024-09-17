@@ -11,7 +11,7 @@ const correctMessage = document.getElementById('correct');
 let targetNumber;
 let attempts = 0;
 //If we want to change we must use let
-let maxNumberOfAttempts = 5;
+let maxNumberOfAttempts = 0;
 
 // Returns a random number from min (inclusive) to max (exclusive)
 // Usage:
@@ -54,7 +54,7 @@ function checkGuess() {
     resetButton.style.display = '';
   }
 
-  if(guess > maxNumberOfAttempts){
+  if(guess > 99){
     alert `Remember: is 1 to 99`;
     resetButton.style.display = '';
   }
@@ -63,8 +63,6 @@ function checkGuess() {
     submitButton.disabled = true;
     guessInput.disabled = true;
     maxGuessesMessage.style.display = '';
-    maxGuessesMessage.innerHTML = `0 guesses remaining`;
-    resetButton.style.display = '';
   }
 
   guessInput.value = '';
