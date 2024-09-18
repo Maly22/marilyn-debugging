@@ -10,8 +10,7 @@ const correctMessage = document.getElementById('correct');
 
 let targetNumber;
 let attempts = 0;
-//If we want to change we must use let
-let maxNumberOfAttempts = 0;
+const maxNumberOfAttempts = 5;
 
 // Returns a random number from min (inclusive) to max (exclusive)
 // Usage:
@@ -81,7 +80,7 @@ function setup() {
   console.log(`target number: ${targetNumber}`);
 
   // Reset number of attempts
-  maxNumberOfAttempts = 5;
+ attempts = 0;
 
   // Enable the input and submit button
   submitButton.disabled = false;
